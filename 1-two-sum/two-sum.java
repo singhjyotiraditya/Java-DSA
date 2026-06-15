@@ -4,9 +4,7 @@ class Solution {
         HashMap<Integer, Integer> seen  = new HashMap<>();
         for (int i = 0; i < nums.length; i++){
             if(seen.containsKey(nums[i])){
-               ans[0] = seen.get(nums[i]);
-               ans[1] = i;
-               break;
+               return new int[]{seen.get(nums[i]), i};
             };
 
             seen.put(target - nums[i], i);
